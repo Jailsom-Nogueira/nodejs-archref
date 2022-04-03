@@ -1,0 +1,13 @@
+SET SQL_SAFE_UPDATES = 0;
+
+SELECT * from _users;
+
+DELETE FROM _users WHERE email = "crs@gmail.com";
+
+CREATE TABLE IF NOT EXISTS _users (
+  id VARCHAR(255) PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  name VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  nickname VARCHAR(255) NOT NULL UNIQUE
+)
